@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
-
+/shelf/
+/workspace.xml
+.idea/
+*.iml
+.out/
+README.md
 # Log file
 *.log
 
