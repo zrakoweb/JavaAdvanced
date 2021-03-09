@@ -1,2 +1,5 @@
-package com.klaseX;public class B {
+package com.klaseX;
+
+public class B extends X{
+
 }

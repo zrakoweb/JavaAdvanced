@@ -1,2 +1,8 @@
-package com.labas;public class A {
+package com.labas;
+
+public class A {
+
+    A(){
+        System.out.print("A");
+    }
 }

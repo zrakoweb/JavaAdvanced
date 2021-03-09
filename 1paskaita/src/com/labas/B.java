@@ -1,2 +1,8 @@
-package com.labas;public class B {
+package com.labas;
+
+public class B extends A {
+
+    B(){
+        System.out.print("B");
+    }
 }
