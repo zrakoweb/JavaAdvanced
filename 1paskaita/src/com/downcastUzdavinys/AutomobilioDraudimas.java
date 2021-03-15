@@ -1,4 +1,4 @@
-package com.DowncastUzdavinys;
+package com.downcastUzdavinys;
 
 public class AutomobilioDraudimas extends Draudimas {
     private String automobilioValstNr;

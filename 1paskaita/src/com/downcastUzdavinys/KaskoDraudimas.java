@@ -1,4 +1,4 @@
-package com.DowncastUzdavinys;
+package com.downcastUzdavinys;
 
 public class KaskoDraudimas extends AutomobilioDraudimas{
     private double fransize;
