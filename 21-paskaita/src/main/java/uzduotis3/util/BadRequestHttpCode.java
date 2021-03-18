@@ -5,6 +5,6 @@ import uzduotis3.HttpCode;
 
 public class BadRequestHttpCode extends HttpCode {
     public BadRequestHttpCode(ErrorLevels medium) {
-        super();
+        super(medium);
     }
 }

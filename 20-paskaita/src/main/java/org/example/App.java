@@ -18,15 +18,15 @@ public class App
 
 
         Medis m1 = new Azuolas();
-        Medis m2 = new Egle();
+        Spygliuotis m2 = new Egle();
         Medis m3 = new Azuolas();
         Medis m4 = new Berzas();
-        Medis m5 = new Kadagys();
-        Medis m6 = new Pusis();
+        Spygliuotis m5 = new Kadagys();
+        Spygliuotis m6 = new Pusis();
 
-        spygliuotis.add((Spygliuotis) m2);
-        spygliuotis.add((Spygliuotis) m5);
-        spygliuotis.add((Spygliuotis) m6);
+        spygliuotis.add(m2);
+        spygliuotis.add(m5);
+        spygliuotis.add(m6);
 
 
         sarasas.add(m1);

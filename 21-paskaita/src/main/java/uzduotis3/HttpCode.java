@@ -2,9 +2,13 @@ package uzduotis3;
 
 import java.util.Comparator;
 
-public class HttpCode implements Comparator<ErrorLevels>{
+public class HttpCode implements Comparable<HttpCode>{
 
     private ErrorLevels errorLevels;
+
+    public HttpCode(ErrorLevels errorLevels) {
+        this.errorLevels = errorLevels;
+    }
 
     public ErrorLevels getErrorLevels() {
         return errorLevels;
@@ -12,11 +16,12 @@ public class HttpCode implements Comparator<ErrorLevels>{
 
     @Override
     public String toString() {
-        return "HttpCode{" +"level=" + errorLevels.values()+'}';
+        return "HttpCode{" +"level=" + errorLevels+'}';
     }
 
+
     @Override
-    public int compare(ErrorLevels o1, ErrorLevels o2) {
-        return o1.getValue() - o2.getValue();
+    public int compareTo(HttpCode p) {
+        return Integer.compare(this.errorLevels.getValue(), p.getErrorLevels().getValue());
     }
 }

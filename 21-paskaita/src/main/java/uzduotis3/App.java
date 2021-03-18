@@ -5,6 +5,7 @@ import uzduotis3.util.InternalServerErrorHttpCode;
 import uzduotis3.util.NotFoundHttpCode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class App {
@@ -17,6 +18,8 @@ public class App {
         list.add(new HttpErrorPair(HttpCodeEnum.CODE_404, new NotFoundHttpCode(ErrorLevels.LOW)));
         list.add(new HttpErrorPair(HttpCodeEnum.CODE_525, new InternalServerErrorHttpCode(ErrorLevels.CRITICAL)));
 
+        System.out.println(list);
+        Collections.sort(list);
         System.out.println(list);
 
     }

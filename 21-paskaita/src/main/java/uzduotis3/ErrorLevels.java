@@ -13,13 +13,6 @@ public enum ErrorLevels{
         this.value = value;
     }
 
-    @Override
-    public String toString() {
-        return "ErrorLevels{" +
-                "value=" + value +
-                '}';
-    }
-
     public int getValue() {
         return value;
     }

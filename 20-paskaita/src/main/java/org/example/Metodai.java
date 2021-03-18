@@ -5,12 +5,12 @@ import java.util.List;
 public class Metodai {
 
     public <T extends Medis> void ivairusMiskas(List<T> medziai){
-        for(T t:medziai){
+        for(Medis t:medziai){
             t.turi();
         }
     }
     public <E extends Spygliuotis> void spigliuociuMiskas(List<E> spygliuotis){
-        for(E e:spygliuotis){
+        for(Spygliuotis e:spygliuotis){
             e.turi();
         }
     }

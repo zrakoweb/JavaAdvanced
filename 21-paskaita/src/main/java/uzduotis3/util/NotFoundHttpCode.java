@@ -5,6 +5,6 @@ import uzduotis3.HttpCode;
 
 public class NotFoundHttpCode extends HttpCode {
     public NotFoundHttpCode(ErrorLevels low) {
-        super();
+        super(low);
     }
 }
