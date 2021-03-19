@@ -13,7 +13,7 @@ public class App {
         List<Payment> payments = Payment.paymentNumberGenerator(1000);
         ArrayList<Payment> arrayList = copyArray(payments);
         LinkedList<Payment> linkedListList = copyLinked(payments);
-        List<Payment> newList = new ArrayList<>();
+
 
         System.out.println(System.currentTimeMillis());
         arrayList.get(10).getDate();
@@ -21,7 +21,7 @@ public class App {
         linkedListList.get(10).getDate();
         System.out.println(System.currentTimeMillis());
         System.out.println(arrayList.size());
-        newList = unique(arrayList);
+        List<Payment> newList = unique(payments);
         System.out.println(newList.size());
 
 

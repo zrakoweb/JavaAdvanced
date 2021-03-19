@@ -15,14 +15,14 @@ public class ListOfNumbers {
         skaiciai.add(skaicius);
     }
 
-    public double getAverage(){
-        int vidurkis = 0;
-        int suma = 0;
+    public Double getAverage(){
+        int counter = 0;
+        Double suma = 0d;
         for(Double i: skaiciai){
             suma += i;
-            vidurkis = suma/skaiciai.size();
+            counter++;
         }
-        return vidurkis;
+        return suma/counter;
     }
 
     @Override

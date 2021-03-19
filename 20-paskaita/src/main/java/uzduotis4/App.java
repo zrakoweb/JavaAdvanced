@@ -23,9 +23,22 @@ public class App {
         listObject3.addNumber(100d);
 
 
-//        ListOfNumbers result1 = findWithMaxAverage(listObject1, listObject2, listObject3);
-//        ListOfNumbers result2 = findWithMaxAverage(listObject1, listObject2);
+        ListOfNumbers result1 = findWithMaxAverage(listObject1, listObject2, listObject3);
+        ListOfNumbers result2 = findWithMaxAverage(listObject1, listObject2);
 
+        System.out.println(result1);
+        System.out.println(result2);
+
+    }
+
+    private static <T extends ListOfNumbers> T findWithMaxAverage(T... parameters){
+
+        T max = parameters[0];
+        for(T parameter: parameters){
+            if(parameter.getAverage() > max.getAverage()){
+                max = parameter;
+            }
+        }return max;
     }
 
 
