@@ -28,14 +28,24 @@ public class BiudzetApplication {
                     int suma = sc.nextInt();
                     System.out.println("iveskite indeksa");
                     int indeksas = sc.nextInt();
-                    System.out.println("pervesta i banka?");
-                    boolean arIbanka = sc.nextBoolean();
+                    sc.nextLine();
+                    System.out.println("pervesta i banka:");
+                    String arIbanka = sc.nextLine();
                     System.out.println("iveskite info:");
                     String info = sc.nextLine();
                     biudzetas.pridetiPajamuIsrasa(new PajamuIrasas(suma, indeksas, arIbanka, info));
+                    System.out.println("Pajamos pridetos");
                     break;
                 case "2":
-
+                    System.out.println("iveskite suma:");
+                    suma = sc.nextInt();
+                    System.out.println("iveskite indeksa");
+                    indeksas = sc.nextInt();
+                    System.out.println("nurodykite buda: ");
+                    String budas = sc.nextLine();
+                    System.out.println("iveskite kortele:");
+                    String kortele = sc.nextLine();
+                    biudzetas.pridetislaiduIsrasa(new IslaiduIrasas(suma, indeksas, budas, kortele));
                     break;
                 case "3":
 

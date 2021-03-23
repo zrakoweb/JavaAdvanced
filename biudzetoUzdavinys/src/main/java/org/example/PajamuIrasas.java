@@ -7,10 +7,10 @@ public class PajamuIrasas {
     private int suma;
     private int indeksas;
     private LocalDateTime data;
-    private boolean arIbanka;
+    private String arIbanka;
     private String info;
 
-    public PajamuIrasas(int suma, int indeksas, boolean arIbanka, String info) {
+    public PajamuIrasas(int suma, int indeksas, String arIbanka, String info) {
         this.suma = suma;
         this.indeksas = indeksas;
         this.data = LocalDateTime.now();
@@ -42,11 +42,11 @@ public class PajamuIrasas {
         this.data = data;
     }
 
-    public boolean isArIbanka() {
+    public String isArIbanka() {
         return arIbanka;
     }
 
-    public void setArIbanka(boolean arIbanka) {
+    public void setArIbanka(String arIbanka) {
         this.arIbanka = arIbanka;
     }
 
