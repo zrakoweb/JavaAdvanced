@@ -7,15 +7,17 @@ import org.example.service.Biudzetas;
 import org.example.util.ConsoleMenu;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class BiudzetApplication {
 
     private final ConsoleMenu mainMenu;
-    private final Biudzetas biudzetas = new Biudzetas();
+    private Biudzetas biudzetas = new Biudzetas();
 
     Scanner sc = new Scanner(System.in);
-
 
     public BiudzetApplication() {
         this.mainMenu = new Menu();
@@ -25,7 +27,7 @@ public class BiudzetApplication {
 
         String value = "";
 
-        while (!value.equals("5")) {
+        while (!value.equals("8")) {
             mainMenu.printMenu();
             value = mainMenu.readInput();
             switch (value) {
@@ -60,12 +62,45 @@ public class BiudzetApplication {
                     break;
                 case "3":
                     System.out.println("gauta pajamu: ");
-                    biudzetas.gautiPajamuSuma();
+                    System.out.println(biudzetas.gautiPajamuSuma());
 
                     break;
                 case "4":
                     System.out.println("isleista pinigu: ");
-                    biudzetas.gautiIslaiduSuma();
+                    System.out.println(biudzetas.gautiIslaiduSuma());
+                    break;
+                case "5":
+                    System.out.println("jusu balansas: ");
+                    System.out.println(biudzetas.gautiBalansa());
+                    break;
+                case "6":
+                    ArrayList<PajamuIrasas> pajamos = biudzetas.gautiPajamuIrasa();
+                    for (PajamuIrasas pajamuIrasas : pajamos) {
+                        System.out.println(String.format("\nPajamu suma: %s \nIndeksas: %x \nData: %s \nAr i banka vesta: %s \nPapildoma info: %s",
+                                pajamuIrasas.getSuma(), pajamuIrasas.getIndeksas(), pajamuIrasas.getData(), pajamuIrasas.getArIbanka(), pajamuIrasas.getInfo()));
+                        System.out.println("ID:" + biudzetas.getId());
+                        System.out.println("---------------------------------");
+                    }
+                    break;
+                case "7":
+                    ArrayList<IslaiduIrasas> islaidos = biudzetas.gautiIslaiduIrasa();
+                    for (IslaiduIrasas islaiduIrasas : islaidos) {
+                        System.out.println(islaiduIrasas.getSuma());
+                        System.out.println(String.format("\nPajamu suma: %s \nIndeksas: %x \nData: %s \nAr i banka vesta: %s \nPapildoma info: %s",
+                                islaiduIrasas.getSuma(), islaiduIrasas.getIndeksas(), islaiduIrasas.getData(), islaiduIrasas.getBudas(), islaiduIrasas.getKortele()));
+                        System.out.println("ID:" + biudzetas.getId());
+                        System.out.println("---------------------------------");
+                    }
+                    break;
+                case "8":
+                    System.out.println("iveskite id iraso kuri norite pasalinti");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    for (PajamuIrasas pajamuIrasas: biudzetas.gautiPajamuIrasa()) {
+                        if (biudzetas.getId() == id) {
+                            biudzetas.gautiPajamuIrasa().remove(id);
+                        }
+                    }
                     break;
                 default:
                     System.out.println("bloga ivestis");

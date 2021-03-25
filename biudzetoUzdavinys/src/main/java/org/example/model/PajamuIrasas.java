@@ -42,7 +42,7 @@ public class PajamuIrasas {
         this.data = data;
     }
 
-    public String isArIbanka() {
+    public String getArIbanka() {
         return arIbanka;
     }
 

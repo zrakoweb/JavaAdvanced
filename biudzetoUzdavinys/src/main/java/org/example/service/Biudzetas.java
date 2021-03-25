@@ -3,36 +3,35 @@ package org.example.service;
 import org.example.model.IslaiduIrasas;
 import org.example.model.PajamuIrasas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Biudzetas {
 
-    private PajamuIrasas[] pajamos;
-    private IslaiduIrasas[] islaidos;
+    private ArrayList<PajamuIrasas> pajamos;
+    private ArrayList<IslaiduIrasas> islaidos;
+    private static int count = 0;
+    private int id=0;
 
     public Biudzetas(){
-        pajamos = new PajamuIrasas[100];
-        islaidos = new IslaiduIrasas[100];
+        pajamos = new ArrayList<>();
+        islaidos = new ArrayList<>();
     }
 
     public void pridetiPajamuIsrasa(PajamuIrasas pajamuIrasas){
-        for(int i = 0; i < pajamos.length; i++){
-            if(pajamos[i] == null){
-                pajamos[i]=pajamuIrasas;
-                break;
-            }
-        }
+        pajamos.add(pajamuIrasas);
+        id=count++;
     }
     public void pridetislaiduIsrasa(IslaiduIrasas islaiduIrasas){
-        for(int i = 0; i < islaidos.length; i++){
-            if(islaidos[i] == null){
-                islaidos[i]=islaiduIrasas;
-                break;
-            }
-        }
+        islaidos.add(islaiduIrasas);
+        id=count++;
     }
-    public int gautiBalansa(){
+    public float gautiBalansa(){
+        float balansas = 0f;
         int islaiduSuma = gautiIslaiduSuma();
         int pajamuSuma = gautiPajamuSuma();
-        return  pajamuSuma - islaiduSuma;
+        balansas = (float)pajamuSuma - (float)islaiduSuma;
+        return balansas;
     }
     public int gautiPajamuSuma(){
         int pajamuSuma = 0;
@@ -49,11 +48,15 @@ public class Biudzetas {
         return islaiduSuma;
     }
 
-    public PajamuIrasas[] gautiPajamuIrasa() {
+    public ArrayList<PajamuIrasas> gautiPajamuIrasa() {
         return pajamos;
     }
 
-    public IslaiduIrasas[] gautiIslaiduIrasa() {
+    public ArrayList<IslaiduIrasas> gautiIslaiduIrasa() {
         return islaidos;
+    }
+
+    public int getId() {
+        return id;
     }
 }
