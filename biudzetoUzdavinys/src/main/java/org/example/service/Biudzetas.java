@@ -1,6 +1,7 @@
-package org.example;
+package org.example.service;
 
-import java.util.Arrays;
+import org.example.model.IslaiduIrasas;
+import org.example.model.PajamuIrasas;
 
 public class Biudzetas {
 
@@ -12,10 +13,9 @@ public class Biudzetas {
         islaidos = new IslaiduIrasas[100];
     }
 
-
     public void pridetiPajamuIsrasa(PajamuIrasas pajamuIrasas){
         for(int i = 0; i < pajamos.length; i++){
-            if(pajamos[i].equals(null)){
+            if(pajamos[i] == null){
                 pajamos[i]=pajamuIrasas;
                 break;
             }
@@ -23,7 +23,7 @@ public class Biudzetas {
     }
     public void pridetislaiduIsrasa(IslaiduIrasas islaiduIrasas){
         for(int i = 0; i < islaidos.length; i++){
-            if(islaidos[i].equals(null)){
+            if(islaidos[i] == null){
                 islaidos[i]=islaiduIrasas;
                 break;
             }
@@ -34,15 +34,14 @@ public class Biudzetas {
         int pajamuSuma = gautiPajamuSuma();
         return  pajamuSuma - islaiduSuma;
     }
-
-    private int gautiPajamuSuma(){
+    public int gautiPajamuSuma(){
         int pajamuSuma = 0;
         for (PajamuIrasas pajamuIrasas:pajamos){
             pajamuSuma += pajamuIrasas.getSuma();
         }
         return pajamuSuma;
     }
-    private int gautiIslaiduSuma(){
+    public int gautiIslaiduSuma(){
         int islaiduSuma =0;
         for(IslaiduIrasas islaiduIrasas: islaidos){
             islaiduSuma += islaiduIrasas.getSuma();

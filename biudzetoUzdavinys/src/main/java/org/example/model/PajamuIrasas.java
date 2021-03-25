@@ -1,21 +1,21 @@
-package org.example;
+package org.example.model;
 
 import java.time.LocalDateTime;
 
-public class IslaiduIrasas {
+public class PajamuIrasas {
 
     private int suma;
     private int indeksas;
     private LocalDateTime data;
-    private String budas;
-    private String kortele;
+    private String arIbanka;
+    private String info;
 
-    public IslaiduIrasas(int suma, int indeksas, String budas, String kortele) {
+    public PajamuIrasas(int suma, int indeksas, String arIbanka, String info) {
         this.suma = suma;
         this.indeksas = indeksas;
         this.data = LocalDateTime.now();
-        this.budas = budas;
-        this.kortele = kortele;
+        this.arIbanka = arIbanka;
+        this.info = info;
     }
 
     public int getSuma() {
@@ -42,30 +42,30 @@ public class IslaiduIrasas {
         this.data = data;
     }
 
-    public String getBudas() {
-        return budas;
+    public String isArIbanka() {
+        return arIbanka;
     }
 
-    public void setBudas(String budas) {
-        this.budas = budas;
+    public void setArIbanka(String arIbanka) {
+        this.arIbanka = arIbanka;
     }
 
-    public String getKortele() {
-        return kortele;
+    public String getInfo() {
+        return info;
     }
 
-    public void setKortele(String kortele) {
-        this.kortele = kortele;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     @Override
     public String toString() {
-        return "IslaiduIrasas{" +
+        return "PajamuIrasas{" +
                 "suma=" + suma +
                 ", indeksas=" + indeksas +
                 ", data=" + data +
-                ", budas='" + budas + '\'' +
-                ", kortele='" + kortele + '\'' +
+                ", arIbanka=" + arIbanka +
+                ", info='" + info + '\'' +
                 '}';
     }
 }
