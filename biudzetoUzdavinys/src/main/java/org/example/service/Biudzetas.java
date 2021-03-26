@@ -8,14 +8,13 @@ import java.util.List;
 
 public class Biudzetas {
 
-    private ArrayList<PajamuIrasas> pajamos;
-    private ArrayList<IslaiduIrasas> islaidos;
+    private ArrayList<Irasas> irasas;
     private static int count = 0;
     private int id=0;
 
     public Biudzetas(){
-        pajamos = new ArrayList<>();
-        islaidos = new ArrayList<>();
+        irasas = new ArrayList<>();
+
     }
 
     public void pridetiPajamuIsrasa(PajamuIrasas pajamuIrasas){
