@@ -8,7 +8,8 @@ public class Irasas {
     private int indeksas;
     private LocalDateTime data;
 
-    public Irasas(int suma, int indeksas,) {
+
+    public Irasas(int suma, int indeksas) {
         this.suma = suma;
         this.indeksas = indeksas;
         this.data = LocalDateTime.now();
@@ -37,4 +38,6 @@ public class Irasas {
     public void setData(LocalDateTime data) {
         this.data = data;
     }
+
+
 }

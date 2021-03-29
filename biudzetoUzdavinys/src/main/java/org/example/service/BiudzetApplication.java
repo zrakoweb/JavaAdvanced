@@ -86,7 +86,7 @@ public class BiudzetApplication {
                     ArrayList<IslaiduIrasas> islaidos = biudzetas.gautiIslaiduIrasa();
                     for (IslaiduIrasas islaiduIrasas : islaidos) {
                         System.out.println(islaiduIrasas.getSuma());
-                        System.out.println(String.format("\nPajamu suma: %s \nIndeksas: %x \nData: %s \nAr i banka vesta: %s \nPapildoma info: %s",
+                        System.out.println(String.format("\nIslaidu suma: %s \nIndeksas: %x \nData: %s \nBudas: %s \nKorteles info: %s",
                                 islaiduIrasas.getSuma(), islaiduIrasas.getIndeksas(), islaiduIrasas.getData(), islaiduIrasas.getBudas(), islaiduIrasas.getKortele()));
                         System.out.println("ID:" + biudzetas.getId());
                         System.out.println("---------------------------------");
