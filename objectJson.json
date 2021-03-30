@@ -1,0 +1,10 @@
+{
+  "sender" : {
+    "name" : "John",
+    "emount" : "100"
+  },
+  "receiver" : {
+    "name" : "Paul",
+    "accountNumber" : "EN55462121"
+  }
+}
