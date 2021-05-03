@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public interface ConsoleMenu {
 
-    public void printMenu();
+    void printMenu();
 
     default String readInput() throws IOException {
         System.out.print("jusu pasirinkimas: ");

@@ -24,19 +24,13 @@ public class Biudzetas {
 
     public void pridetiPajamuIsrasa(PajamuIrasas pajamuIrasas) {
         pajamos.add(pajamuIrasas);
-
-        id += 1;
     }
 
     public void pridetislaiduIsrasa(IslaiduIrasas islaiduIrasas) {
-        id += 1;
-        islaiduIrasas.se
         islaidos.add(islaiduIrasas);
-
-
     }
 
-    public ArrayList<Irasas> getIrasas() {
+    public List<Irasas> getIrasas() {
         return irasas;
     }
 
@@ -76,7 +70,9 @@ public class Biudzetas {
         return islaidos;
     }
 
-    public ArrayList<Irasas> gautiIrasa(){return  irasas;}
+    public ArrayList<Irasas> gautiIrasa() {
+        return irasas;
+    }
 
     public int getId() {
         return id;
